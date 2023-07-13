@@ -12,7 +12,7 @@ int main(void)
 	int i;
 	int sizes[] = {sizeof(char), sizeof(int), sizeof(long int)
 		, sizeof(long long int), sizeof(float)};
-	char *sentences[] = {"a char", "an int", "a long"
+	char *sentences[] = {"a char", "an int", "a long int"
 		, "a long long integer", "a float"};
 	for (i = 0; i < sizeof(sizes) / sizeof(sizes[0]); i++)
 	{
