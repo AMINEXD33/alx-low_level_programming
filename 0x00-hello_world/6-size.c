@@ -7,14 +7,12 @@
  * 
  * Return: Always 0 (Success)
  */
-int main(void) {
-  int sizes[] = {sizeof(char), sizeof(int), sizeof(long int), sizeof(long long int), sizeof(float)};
-  char *sentences[] = {"a char", "an int", "a long int", "a long long int", "a float"};
-  int size_ = sizeof(sizes) / sizeof(int);
-
-  for (int x = 0; x <= size_; x++) {
-    printf("Size of %s : %d byte(s)\n", sentences[x], sizes[x]);
-  }
-
-  return 0;
+int main(void) 
+{
+	printf("Size of a char: %d\n", sizeof(char));
+	printf("Size of an int: %d\n", sizeof(int));
+	printf("Size of a long int: %d\n", sizeof(long int));
+	printf("Size of a long long: %d\n", sizeof(long long int));
+	printf("Size of float: %d\n", sizeof(float));
+	return (0);
 }
