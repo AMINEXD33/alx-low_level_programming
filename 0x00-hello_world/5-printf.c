@@ -11,6 +11,6 @@ int main(void)
 
 	char txt[] = "with proper grammar, but the outcome is a piece of art";
 
-	printf(" % s", txt);
+	printf(" %s", txt);
 	return (0);
 }
