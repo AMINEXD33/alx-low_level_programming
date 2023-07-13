@@ -13,7 +13,7 @@ int main(void)
 	int sizes[] = {sizeof(char), sizeof(int), sizeof(long int)
 		, sizeof(long long int), sizeof(float)};
 	char *sentences[] = {"a char", "an int", "a long int"
-		, "a long long integer", "a float"};
+		, "a long long int", "a float"};
 	for (i = 0; i < sizeof(sizes) / sizeof(sizes[0]); i++)
 	{
 		printf("Size of %s: %d byte(s)\n", sentences[i], sizes[i]);
