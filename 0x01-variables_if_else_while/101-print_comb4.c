@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-	int tracker; 
+	int tracker;
 	int tracker2;
-       	int tracker3;
+	int tracker3;
 
 	for (tracker = 0; tracker <= 7; tracker++)
 	{
@@ -28,5 +28,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
