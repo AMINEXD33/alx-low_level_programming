@@ -3,31 +3,33 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
  * Description: 'picks a random number and see if bigger
  * than 5 or smaller than 6 or equale to 0'
- * @parameter: describe the parameter
- * 
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int n;
 
+	int last_;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int last_ = n%10;
-	if (last_ > 5)
+	last_ = n % 10;
+	if (last_ < 6)
 	{
-	    printf("Last digit of %d is %d and is greater than 5", n,last_);
+		if (last_ == 0)
+		{
+			printf("Last digit of %d is %d and is 0", n, last_);
+		}
+		else
+		{
+			printf("Last digit of %d is %d and is less than 6 and not 0");
+		}
 	}
-	else if (last_ == 0)
+	else if (last_ > 5)
 	{
-	    printf("Last digit of %d is %d and is 0", n,last_);
-	}
-	else if (last_ < 6)
-	{
-	    printf("Last digit of %d is %d and is less than 6 and not 0", n,last_);
+		printf("Last digit of %d is %d and is greater than 5");
 	}
 	return (0);
 }
