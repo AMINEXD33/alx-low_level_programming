@@ -12,5 +12,6 @@ int main(void)
 	{
 		printf("%d", tracker);
 	}
+	printf("\n");
 	return (0);
 }
