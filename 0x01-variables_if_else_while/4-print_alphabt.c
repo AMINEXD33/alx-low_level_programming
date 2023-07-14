@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	char alphabet[24];
+	char alphabet[26];
 	int tracker;
 
 	for (tracker = 0 ; tracker < 26 ; tracker++)
@@ -18,7 +18,10 @@ int main(void)
 	}
 	for (tracker = 0 ; tracker < 26 ; tracker++)
 	{
-		printf("%c", alphabet[tracker]);
+		if (alphabet[tracker])
+		{
+			printf("%c", alphabet[tracker]);
+		}
 	}
 	printf("\n");
 	return (0);
