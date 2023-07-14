@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	char alphabet[26];
+	char alphabet[24];
 	int tracker;
 
 	for (tracker = 0 ; tracker < 26 ; tracker++)
