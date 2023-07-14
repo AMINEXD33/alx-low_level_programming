@@ -12,5 +12,6 @@ int main(void)
 	{
 		putchar('0' + tracker);
 	}
+	putchar('\n');
 	return (0);
 }
