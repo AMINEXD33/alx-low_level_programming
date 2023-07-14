@@ -10,14 +10,16 @@ int main(void)
 
 	for (tracker = 0 ; tracker < 10 ; tracker++)
 	{
-		if (tracker != 0){
+		if (tracker != 0)
+		{
 			putchar(',');
 		}
-		else if (tracker != 0){
+		if (tracker != 0)
+		{
 			putchar(' ');
 		}
 		putchar('0' + tracker);
 	}
-	outchar('\n');
+	putchar('\n');
 	return (0);
 }
