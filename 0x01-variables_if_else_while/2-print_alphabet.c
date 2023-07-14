@@ -1,18 +1,21 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: print the alphabet'
+ * Description: print alphabet
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int alpha_count;
+	char alphabet[26];
+	int tracker;
 
-	alpha_count = 0;
-	char alphabet[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
-		, 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-	for (alpha_count ; alpha_count <= sizeof(alphabet) ;  alpha_count++)
+	for (tracker = 0 ; tracker < 26 ; tracker++)
 	{
-		putchar(alphabet[alpha_count]);
+		alphabet[tracker] = 'a' + tracker;
 	}
+	for (tracker = 0 ; tracker < 26 ; tracker++)
+	{
+		printf("%c", alphabet[tracker]);
+	}
+	return (0);
 }
