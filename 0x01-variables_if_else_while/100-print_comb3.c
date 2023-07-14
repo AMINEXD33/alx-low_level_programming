@@ -6,7 +6,6 @@
 */
 int main(void)
 {
-
 	int tracker;
 	int tracker2;
 
@@ -14,14 +13,20 @@ int main(void)
 	{
 		for (tracker2 = 1 ; tracker2 < 10 ; tracker2++)
 		{
-			if (tracker != 0 ||  tracker2 != 1)
+			if ((tracker + '0') < (tracker2 + '0'))
 			{
-				putchar(',');
-				putchar(' ');
+			
+				if (tracker != tracker2)
+				{
+					if (tracker != 0 ||  tracker2 != 1)
+					{
+						putchar(',');
+						putchar(' ');
+					}	
+					putchar('0' + tracker);
+					putchar('0' + tracker2);
+				}
 			}
-			putchar('0' + tracker);
-			putchar('0' + tracker2);
-
 		}
 	}
 	putchar('\n');
