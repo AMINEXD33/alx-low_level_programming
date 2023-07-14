@@ -15,8 +15,8 @@ int main(void)
 	}
 	for (tracker = 0 ; tracker < 10 ; tracker++)
 	{
-		printf("%c", tmp_char[tracker]);
+		putchar(tmp_char[tracker]);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
