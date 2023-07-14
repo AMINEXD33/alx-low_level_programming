@@ -13,7 +13,7 @@ int main(void)
 	{
 		alphabet[tracker] = 'a' + tracker;
 	}
-	for (tracker = 26 ; tracker >= 0 ; tracker--)
+	for (tracker = 25 ; tracker >= 0 ; tracker--)
 	{
 		printf("%c", alphabet[tracker]);
 	}
