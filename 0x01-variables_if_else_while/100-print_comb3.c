@@ -15,14 +15,13 @@ int main(void)
 		{
 			if ((tracker + '0') < (tracker2 + '0'))
 			{
-			
 				if (tracker != tracker2)
 				{
 					if (tracker != 0 ||  tracker2 != 1)
 					{
 						putchar(',');
 						putchar(' ');
-					}	
+					}
 					putchar('0' + tracker);
 					putchar('0' + tracker2);
 				}
