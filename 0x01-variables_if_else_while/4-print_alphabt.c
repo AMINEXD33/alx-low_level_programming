@@ -11,7 +11,7 @@ int main(void)
 
 	for (tracker = 0 ; tracker < 26 ; tracker++)
 	{
-		if ((('a' + tracker) != 'q)' && (('a' + tracker) != 'e'))
+		if ((('a' + tracker) != 'q') && (('a' + tracker) != 'e'))
 		{
 			alphabet[tracker] = 'a' + tracker;
 		}
