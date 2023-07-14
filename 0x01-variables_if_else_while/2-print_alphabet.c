@@ -17,5 +17,6 @@ int main(void)
 	{
 		printf("%c", alphabet[tracker]);
 	}
+	printf("\n");
 	return (0);
 }
