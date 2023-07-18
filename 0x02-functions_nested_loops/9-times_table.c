@@ -12,7 +12,9 @@ void times_table(void)
 	int n2;
 	int digit1;
 	int digit2;
+	int flag1;
 
+	flag1 = 0;
 	for (n1 = 0 ; n1 <= 9 ; n1++)
 	{
 		for (n2 = 0 ; n2 <= 9 ; n2++)
@@ -20,9 +22,16 @@ void times_table(void)
 			digit1 = ((n1 * n2) / 10);
 			digit2 = ((n1 * n2) % 10);
 			if (digit1 != 0)
+			{
 				_putchar('0' + digit1);
-
+				flag1 = 1;
+			}
 			_putchar('0' + digit2);
+			if (flag1 == 1)
+			{
+				flag1 = 0;
+				_putchar(' ');
+			}
 			_putchar(' ');
 		}
 			_putchar('\n');
