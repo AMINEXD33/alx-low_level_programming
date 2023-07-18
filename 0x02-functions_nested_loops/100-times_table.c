@@ -1,4 +1,5 @@
 #include"main.h"
+#include <stdio>
 /**
 *print_times_table - to n we go
 *
@@ -44,7 +45,7 @@ void print_times_table(int n)
 					_putchar(' ');
 				}
 				}
-		_putchar('\n');
+		printf("\n");
 		}
 	}
 }
