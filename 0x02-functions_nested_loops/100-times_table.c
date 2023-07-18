@@ -20,13 +20,17 @@ void print_times_table(int n)
 	{
 		for (n2  = 0; n2 <= n; n2++)
 		{
-			if (n2 != n)
+			if (n2 != n && n2 != 0)
 			{
-				printf(",%-5d", n1 * n2);
+				printf("%-5d,", n1 * n2);
 			}
 			else if (n2 == n)
 			{
-				printf(",%-5d", n1 * n2);
+				printf("%-5d", n1 * n2);
+			}
+			else if (n2 == 0)
+			{
+				printf("%d,", n1 * n2);
 			}
 		}
 		printf("\n");
