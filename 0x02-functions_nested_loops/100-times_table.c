@@ -14,7 +14,7 @@ void print_times_table(int n)
 	int digit2;
 	int flag1;
 
-	if (n < 0 || n > 15)
+	if (n > 0 || n < 15)
 	{
 		flag1 = 0;
 		for (n1 = 0; n1 <= n; n1++)
