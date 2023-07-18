@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_alphabet - weeeet
+* print_alphabet_10x- weeeet
 *
 * Description: 'prints all the alphabet and a new line'
 *
