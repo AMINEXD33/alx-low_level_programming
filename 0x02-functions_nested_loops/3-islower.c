@@ -3,13 +3,12 @@
 *_islower - check
 *
 * Description: 'checks if the char passed is lowercase'
-*
-* Return:  1 (Success) -> lower
-* Return:   0 (Fail) -> not lower
+*@c : c- is the ascci representation of a letter
+* Return:  1 (Success) -> lower , 0 (Fail) -> not lower.
 */
 int _islower(int c)
 {
-	if ( 97<=c<=122)
+	if (c >= 97 && c <= 122)
 	{
 		return (1);
 	}
