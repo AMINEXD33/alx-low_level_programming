@@ -35,7 +35,7 @@ void print_times_table(int n)
 						printf(" %d,", result);
 					}
 				}
-				else if ((n2 != 0 ||  n2 == n) && (n <= 15 && n >= 0))
+				else if ((n2 == 0 ||  n2 == n) && (n <= 15 && n >= 0))
 				{
 					printf("%d", result);
 				}
