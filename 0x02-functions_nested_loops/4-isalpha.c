@@ -1,0 +1,20 @@
+#include "main.h"
+/**
+*_isalpha()
+*
+* Description: 'check if the number represents an alpha value or not'
+* @c: int representation
+*
+* Return:  0 (False) , 1 (True)
+*/
+int _isalpha(int c)
+{
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
