@@ -28,7 +28,7 @@ int main(void)
 			result += sum;
 		}
 	}
-	printf("%lg\n",result);
+	printf("%ld\n",result);
 	return (0);
 }
 
