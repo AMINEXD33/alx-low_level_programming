@@ -11,14 +11,14 @@ int print_last_digit(int n)
 	int result = n % 10;
 	if (result > 0)
 	{
-		return (result);
+		return ((result) * 10 + result);
 	}
 	else if (result < 0)
 	{
-		return (result * (-1));
+		return ((result * (-1)) * 10 + result);
 	}
 	else
 	{
-		return (0);
+		return (00);
 	}
 }
