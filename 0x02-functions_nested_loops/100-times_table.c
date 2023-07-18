@@ -33,13 +33,14 @@ void print_times_table(int n)
 					_putchar(' ');
 				}
 				_putchar('0' + digit2);
-				if (n2 < 9)
+				if (n2 < n)
 					_putchar(',');
 				if (flag1 == 1 && n2 < n)
 				{
 					flag1 = 0;
 				}
 				if (n2 < n)
+					_putchar(' ');
 					_putchar(' ');
 				}
 		_putchar('\n');
