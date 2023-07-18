@@ -16,7 +16,7 @@ int main(void)
 	a = 0;
 	b = 1;
 	sum = 0;
-	for (x = 0 ; x <= 50 ; x++)
+	for (x = 0 ; x < 50 ; x++)
 	{
 		sum = a + b;
 		a = b;
