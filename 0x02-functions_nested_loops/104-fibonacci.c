@@ -14,7 +14,7 @@ int main(void)
 	unsigned long tmp;
 
 	printf("%lu", num1);
-	for (i = 1; i < 98; i++)
+	for (i = 1; i < 96; i++)
 	{
 		printf(", %lu", num2);
 		tmp = num1 + num2;
