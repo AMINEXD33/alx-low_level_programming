@@ -28,6 +28,7 @@ void times_table(void)
 			else
 			{
 				flag1 = 1;
+				_putchar(' ');
 			}
 			_putchar('0' + digit2);
 			if (n2 < 9)
@@ -35,7 +36,6 @@ void times_table(void)
 			if (flag1 == 1 && n2 < 9)
 			{
 				flag1 = 0;
-				_putchar(' ');
 				_putchar(' ');
 			}
 			_putchar(' ');
