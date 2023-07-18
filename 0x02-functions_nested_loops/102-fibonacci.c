@@ -25,7 +25,7 @@ int main(void)
 		{
 			printf("%ld, ", sum);
 		}
-		else if (x == 50)
+		else if (x == 49)
 		{
 			printf("%ld", sum);
 		}
