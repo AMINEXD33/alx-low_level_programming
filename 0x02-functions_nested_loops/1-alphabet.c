@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* main - Entry point
+* print_alphabet 
 *
-* Description: 'runs the function alphabet'
+* Description: 'prints all the alphabet and a new line'
 *
 * Return: Always 0 (Success)
 */
