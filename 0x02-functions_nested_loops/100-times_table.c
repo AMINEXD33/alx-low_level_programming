@@ -22,11 +22,12 @@ void print_times_table(int n)
 		{
 			if (n2 != n && n2 != 0)
 			{
-				printf("%-5d,", n1 * n2);
+				printf("%-4d", n1 * n2);
+				printf(",");
 			}
 			else if (n2 == n)
 			{
-				printf("%-5d", n1 * n2);
+				printf("%-4d", n1 * n2);
 			}
 			else if (n2 == 0)
 			{
