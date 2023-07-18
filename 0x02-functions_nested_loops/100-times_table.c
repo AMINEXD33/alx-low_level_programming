@@ -40,7 +40,8 @@ void print_times_table(int n)
 					printf("%d", result);
 				}
 			}
-		printf("\n");
+		if (n <= 15 && n > 0)
+			printf("\n");
 		}
 	}
 }
