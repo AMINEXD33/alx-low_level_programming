@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_isalpha()
+*_isalpha- alpha or not
 *
 * Description: 'check if the number represents an alpha value or not'
 * @c: int representation
