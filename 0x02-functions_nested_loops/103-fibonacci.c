@@ -23,12 +23,15 @@ int main(void)
 		sum = a + b;
 		a = b;
 		b = sum;
-		if (sum < 4000000)
+		if (sum <= 4000000)
 		{
-			result += sum;
+			if ((sum % 2) == 0)
+			{
+				result += sum;
+			}
 		}
 	}
-	printf("%ld\n",result);
+	printf("%ld\n", result);
 	return (0);
 }
 
