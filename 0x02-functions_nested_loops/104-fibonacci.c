@@ -21,7 +21,7 @@ int main(void)
 		sum = a + b;
 		a = b;
 		b = sum;
-		if (x < 97)
+		if (x < 98)
 		{
 			printf("%lu, ", sum);
 		}
