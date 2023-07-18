@@ -39,9 +39,10 @@ void print_times_table(int n)
 				{
 					flag1 = 0;
 				}
-				if (n2 < n)
+				if (n2 < n){
 					_putchar(' ');
 					_putchar(' ');
+				}
 				}
 		_putchar('\n');
 		}
