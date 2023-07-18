@@ -1,7 +1,7 @@
 int _putchar(char c);
 void print_alphabet(void);
 
-
+/*
 void print_alphabet(void)
 {
         int i;
@@ -13,4 +13,5 @@ void print_alphabet(void)
         }
         _putchar('\n');
 }
+*/
 
