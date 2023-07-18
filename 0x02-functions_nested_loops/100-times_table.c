@@ -1,9 +1,9 @@
 #include"main.h"
 /**
-*times_table-weeeet
+*print_times_table - to n we go
 *
-*description:'printstimes_table'
-*
+*description:'print_times_table of n'
+*@n : n is the number
 *return:none
 */
 void print_times_table(int n)
@@ -20,7 +20,7 @@ void print_times_table(int n)
 		for (n1 = 0; n1 <= n; n1++)
 		{
 			for (n2 = 0; n2 <= n; n2++)
-			{		
+			{
 				digit1 = ((n1 * n2) / 10);
 				digit2 = ((n1 * n2) % 10);
 				if (digit1 != 0)
