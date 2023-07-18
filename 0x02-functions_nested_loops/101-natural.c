@@ -1,27 +1,25 @@
 #include <stdio.h>
-
+/**
+*main - Entry point
+*
+*Description: 'print the sum of all multiples of
+*3 or 5 below 1024'
+*
+* Return: Always 0 (Success)
+ */
 int main(void)
 {
+	int x;
 	int result;
 	int target;
-	int var[2] = {3, 5};
-	int x;
-	int y;
-	int tracker;
 
+	target = 1024;
 	result = 0;
-	target = 1023;
-	for (x = 0; x <= 1; x++)
+	for (x = 1 ; x < target ; x++)
 	{
-		tracker = 0;
-		y = 0;
-		for (y = 0; y < target; y++)
+		if (x % 3 == 0 || x % 5 == 0)
 		{
-			tracker = var[x] * y;
-			if (tracker < target)
-			{
-				result += tracker;
-			}
+			result += x;
 		}
 	}
 	printf("%d\n", result);
