@@ -24,9 +24,13 @@ void times_table(void)
 			if (digit1 != 0)
 			{
 				_putchar('0' + digit1);
+			}
+			else
+			{
 				flag1 = 1;
 			}
 			_putchar('0' + digit2);
+			_putchar(',');
 			if (flag1 == 1)
 			{
 				flag1 = 0;
