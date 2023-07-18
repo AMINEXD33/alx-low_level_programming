@@ -1,12 +1,6 @@
 #include <stdio.h>
-/**
-*main - Entry point
-*
-*Description: 'print the first 98 units of fibonacci
-*
-* Return: Always 0 (Success)
- */
-int main(void)
+
+int main()
 {
 	unsigned long a;
 	unsigned long b;
@@ -18,23 +12,19 @@ int main(void)
 	sum = 0;
 	for (x = 0 ; x < 98 ; x++)
 	{
-		sum = a + b;
+		sum = a+b;
 		a = b;
 		b = sum;
-<<<<<<< HEAD
-		if (x < 98)
-=======
-		if (x < 97)
->>>>>>> 16e4d17dd9bd0b332a35f393e6d9aab4059237ae
+		if (x < 97 )
 		{
-			printf("%lu, ", sum);
+			printf("%lu, ",sum);
 		}
-		else if (x == 97)
+		else if(x == 97)
 		{
-			printf("%lu", sum);
+			printf("%lu",sum);
 		}
 	}
 
 
-	return (0);
+	return 0;
 }
