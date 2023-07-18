@@ -21,7 +21,11 @@ int main(void)
 		sum = a + b;
 		a = b;
 		b = sum;
+<<<<<<< HEAD
 		if (x < 98)
+=======
+		if (x < 97)
+>>>>>>> 16e4d17dd9bd0b332a35f393e6d9aab4059237ae
 		{
 			printf("%lu, ", sum);
 		}
