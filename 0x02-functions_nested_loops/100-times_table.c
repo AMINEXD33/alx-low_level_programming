@@ -20,7 +20,7 @@ void print_times_table(int n)
 			for (n2 = 0; n2 <= n; n2++)
 			{
 				result = n1 * n2;
-				if (n2 != 0 || n2 != n)
+				if ((n2 != 0 || n2 != n) && (n <= 15 && n > 0))
 				{
 					if (result < 10)
 					{
@@ -35,7 +35,7 @@ void print_times_table(int n)
 						printf(" ,%d", result);
 					}
 				}
-				else if (n2 == 0 || n2 == n)
+				else if ((n2 == 0 || n2 == n) && (n <= 15 && n > 0))
 				{
 					printf("%d", result);
 				}
