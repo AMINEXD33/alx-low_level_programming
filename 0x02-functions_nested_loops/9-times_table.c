@@ -30,14 +30,17 @@ void times_table(void)
 				flag1 = 1;
 			}
 			_putchar('0' + digit2);
-			_putchar(',');
-			if (flag1 == 1)
+			if (n2 < 0)
+				_putchar(',');
+			if (flag1 == 1 && n2 < 9)
 			{
 				flag1 = 0;
 				_putchar(' ');
 			}
 			_putchar(' ');
 		}
-			_putchar('\n');
+		_putchar('\n');
 	}
+
 }
+
