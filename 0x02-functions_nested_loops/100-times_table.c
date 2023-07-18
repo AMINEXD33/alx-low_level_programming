@@ -20,7 +20,14 @@ void print_times_table(int n)
 	{
 		for (n2  = 0; n2 <= n; n2++)
 		{
-			printf("%-4d,", n1 * n2);
+			if (n2 != n)
+			{
+				printf(",%-5d", n1 * n2);
+			}
+			else if (n2 == n)
+			{
+				printf(",%-5d", n1 * n2);
+			}
 		}
 		printf("\n");
 	}
