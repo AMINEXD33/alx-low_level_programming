@@ -6,8 +6,15 @@
 *
 * Return: Always 0 (Success)
 */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+	char alpha = 'a';
+
+	for (i = 0; i <= 25; i++)
+	{
+		_putchar(alpha + i);
+	}
+	_putchar('\n');
 }
+
