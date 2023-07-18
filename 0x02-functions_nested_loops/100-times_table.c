@@ -11,8 +11,7 @@ void print_times_table(int n)
 {
 	int n1;
 	int n2;
-	int digit1;
-	int digit2;
+	int result;
 	int flag1;
 
 	if (n > 0 || n < 15)
@@ -22,29 +21,29 @@ void print_times_table(int n)
 		{
 			for (n2 = 0; n2 <= n; n2++)
 			{
-				digit1 = ((n1 * n2) / 10);
-				digit2 = ((n1 * n2) % 10);
-				if (digit1 != 0)
+				result = n1 * n2;
+				if (result > 10 && result < 100)
 				{
-					_putchar('0' + digit1);
+					flag1 = 2;
 				}
-				else if (digit1 == 0 && n2 != 0)
+				else if (result >= 100)
 				{
 					flag1 = 1;
-					_putchar(' ');
 				}
-				_putchar('0' + digit2);
-				if (n2 < n)
-					_putchar(',');
-				if (flag1 == 1 && n2 < n)
+				else if (result < 10)
 				{
-					flag1 = 0;
+					flag1 = 3;
 				}
-				if (n2 < n){
-					_putchar(' ');
-					_putchar(' ');
+				if (n2 == 0 || n2 == n)
+				{
+					printf("%d", result);
 				}
+				while (flag1 != 0)
+				{
+					flag1--;
+					printf(" ");
 				}
+			}
 		printf("\n");
 		}
 	}
