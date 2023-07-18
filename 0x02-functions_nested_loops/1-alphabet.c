@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_alphabet 
+* print_alphabet - weeeet
 *
 * Description: 'prints all the alphabet and a new line'
 *
@@ -17,4 +17,3 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
-
