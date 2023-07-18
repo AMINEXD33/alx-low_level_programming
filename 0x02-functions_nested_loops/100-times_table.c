@@ -20,27 +20,27 @@ void print_times_table(int n)
 			for (n2 = 0; n2 <= n; n2++)
 			{
 				result = n1 * n2;
-				if ((n2 != 0 || n2 != n) && (n <= 15 && n > 0))
+				if ((n2 != 0 || n2 != n) && (n <= 15 && n >= 0))
 				{
 					if (result < 10)
 					{
-						printf("   ,%d", result);
+						printf("   %d,", result);
 					}
 					else if (result > 10 && result < 100)
 					{
-						printf("  ,%d", result);
+						printf("  %d,", result);
 					}
 					else if (result >= 100 && result < 1000)
 					{
-						printf(" ,%d", result);
+						printf(" %d,", result);
 					}
 				}
-				else if ((n2 == 0 || n2 == n) && (n <= 15 && n > 0))
+				else if ((n2 == 0 || n2 == n) && (n <= 15 && n >= 0))
 				{
 					printf("%d", result);
 				}
 			}
-		if (n <= 15 && n > 0)
+		if (n <= 15 && n >= 0)
 			printf("\n");
 		}
 	}
