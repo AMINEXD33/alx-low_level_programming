@@ -43,6 +43,8 @@ void print_times_table(int n)
 					flag1--;
 					printf(" ");
 				}
+				if (n2 != 0 || n2 != n)
+					printf(",%d", result);
 			}
 		printf("\n");
 		}
