@@ -13,8 +13,12 @@ int _abs(int n)
 	{
 		return (n);
 	}
+	else if (n < 0)
+	{
+		return (n * (-n));
+	}
 	else
 	{
-		return (n * -n);
+		return (0);
 	}
 }
