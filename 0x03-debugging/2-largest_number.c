@@ -12,11 +12,10 @@ int largest_number(int a, int b, int c)
 	int x;
 	int largest;
 	int list_[2];
-	
+
 	list_[0] = b;
-      	list_[1]  = c;
+	list_[1]  = c;
 	largest = a;
-	
 	for (x = 0 ; x <= 1; x++)
 	{
 		if (list_[x] > largest)
@@ -24,7 +23,5 @@ int largest_number(int a, int b, int c)
 			largest = list_[x];
 		}
 	}
-	
-
 	return (largest);
 }
