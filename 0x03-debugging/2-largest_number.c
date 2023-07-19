@@ -9,20 +9,22 @@
 
 int largest_number(int a, int b, int c)
 {
+	int x;
 	int largest;
-
-	if (a > b && a > c)
+	int list_[2];
+	
+	list_[0] = b;
+      	list_[1]  = c;
+	largest = a;
+	
+	for (x = 0 ; x <= 1; x++)
 	{
-		largest = a;
+		if (list_[x] > largest)
+		{
+			largest = list_[x];
+		}
 	}
-	else if (b > a)
-	{
-		largest = b;
-	}
-	else
-	{
-		largest = c;
-	}
+	
 
 	return (largest);
 }
