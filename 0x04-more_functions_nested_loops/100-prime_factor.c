@@ -6,17 +6,17 @@
  * @Y: Second number
  * Return: Greatest common divisor of X and Y
  */
-long long gcd(long long X, long long Y)
+unsigned long gcd(unsigned long X, unsigned long Y)
 {
     while (Y != 0)
     {
-        long long tmp;
+        unsigned long tmp;
 
         tmp = Y;
         Y = X % Y;
         X = tmp;
     }
-    return (X);
+    return X;
 }
 
 /**
@@ -25,20 +25,22 @@ long long gcd(long long X, long long Y)
  * @MAX: Maximum number of iterations for the algorithm
  * Return: A non-trivial factor of n, or 0 if not found
  */
-long long PX(long long n, long long MAX)
+unsigned long PX(unsigned long n, unsigned long MAX)
 {
-    long long i;
-    long long A = 2;
+    unsigned long i;
+    unsigned long f;
+
+    unsigned long A = 2;
     for (i = 2; i <= MAX; i++)
     {
         A = (A * A) % n;
-        long long f = gcd(A - 1, n);
+        f = gcd(A - 1, n);
         if (1 < f && f < n)
         {
-            return (f);
+            return f;
         }
     }
-    return (0);
+    return 0;
 }
 
 /**
@@ -46,16 +48,15 @@ long long PX(long long n, long long MAX)
  * @n: Number to find the largest prime factor of
  * Return: Largest prime factor of n
  */
-long long largest_PRIMEFACTOR(long long n)
+unsigned long largest_PRIMEFACTOR(unsigned long n)
 {
-    long long MAX = 2000000;
-    long long fac;
+    unsigned long MAX = 2000000;
     while (1)
     {
-        fac = PX(n, MAX);
+        unsigned long fac = PX(n, MAX);
         if (fac == 0)
         {
-            return (n);
+            return n;
         }
         n /= fac;
     }
@@ -67,9 +68,9 @@ long long largest_PRIMEFACTOR(long long n)
  */
 int main(void)
 {
-    long long num = 612852475143;
-    long long LARGEST = largest_PRIMEFACTOR(num);
-    printf("%lld\n", LARGEST);
-    return (0);
+    unsigned long num = 612852475143;
+    unsigned long LARGEST = largest_PRIMEFACTOR(num);
+    printf("%lu\n", LARGEST);
+    return 0;
 }
 
