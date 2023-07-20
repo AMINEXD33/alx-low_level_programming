@@ -26,19 +26,19 @@ int main(void)
 				break;
 		}
 		if (flag1 == 1 && flag2 == 1)
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		else if (flag1 == 1 && flag2 == 0)
-			printf("Fizz");
+			printf("Fizz ");
 		else if (flag1 == 0 && flag2 == 1)
-			printf("Buzz");
+			printf("Buzz ");
 		else
 		{
-			printf("%d", X);
+			printf("%d ", X);
 		}
 		/*reset flags for next loop*/
 		flag1 = 0;
 		flag2 = 0;
 	}
-	/*putchar('\n');*/
+	putchar('\n');
 	return (0);
 }
