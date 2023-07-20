@@ -39,6 +39,6 @@ int main(void)
 		flag1 = 0;
 		flag2 = 0;
 	}
-	putchar('\n');
+	/*putchar('\n');*/
 	return (0);
 }
