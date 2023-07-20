@@ -33,7 +33,7 @@ int main(void)
 			printf("Buzz");
 		else
 		{
-			printf("%d ", X);
+			printf("%d", X);
 		}
 		if (X < 100)
 			printf(" ");
