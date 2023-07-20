@@ -9,16 +9,22 @@ void more_numbers(void)
 {
 	int X;
 	int Y;
+	int tracker;
 
-	for (X = 0; X <= 14; X++)
+	tracker = 0;
+	while (tracker < 10)
 	{
-		Y  = X;
-		if (X >= 10)
+		for (X = 0; X <= 14; X++)
 		{
-			Y = (X - 10);
-			_putchar('1');
+			Y  = X;
+			if (X >= 10)
+			{
+				Y = (X - 10);
+				_putchar('1');
+			}
+			_putchar('0' + Y);
 		}
-		_putchar('0' + Y);
+		_putchar('\n');
+		tracker++;
 	}
-	_putchar('\n');
 }
