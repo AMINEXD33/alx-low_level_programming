@@ -5,12 +5,10 @@
  * Buzz for multiple of 5 , and FizzBuzz for both
  * Return: Always 0.
  */
-void main(void)
+int main(void)
 {
 	int X;
 	int Y;
-	int Z;
-	int I;
 	int flag1;/*boolean values*/
 	int flag2;/*boolean values*/
 
