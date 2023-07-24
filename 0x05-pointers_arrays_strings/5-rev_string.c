@@ -10,6 +10,8 @@ void rev_string(char *s)
 	int MIN;
 	int tmp;
 
+	MAX = 0;
+	MIN = 0;
 	while (s[MAX] != '\n')
 	{
 		MAX++;
