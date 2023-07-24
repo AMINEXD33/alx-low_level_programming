@@ -19,7 +19,7 @@ void puts_half(char *str)
 	if (len > 0)
 	{
 		len--;
-		if (((len) % 2)  == 0)
+		if (((len) % 2)  == 1)
 		{
 			tracker = len / 2;
 		}
