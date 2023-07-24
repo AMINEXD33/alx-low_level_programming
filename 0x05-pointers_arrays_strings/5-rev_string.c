@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  *rev_string - reverse the instence of the string it self
  *@s : is the char var
@@ -18,7 +17,6 @@ void rev_string(char *s)
 	{
 		MAX++;
 	}
-	printf("%d", MAX);
 	if (MAX > 0)
 	{
 		MAX--;
