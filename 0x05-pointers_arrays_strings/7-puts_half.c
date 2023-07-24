@@ -24,7 +24,8 @@ void puts_half(char *str)
 		}
 		else
 		{
-			tracker = (len - 1) / 2;
+			tracker = (len) / 2;
+			tracker--;
 		}
 		while (str[tracker] != '\0')
 		{
