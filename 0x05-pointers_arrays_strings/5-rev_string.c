@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *rev_string - reverse the instence of the string it self
  *@s : is the char var
@@ -6,37 +7,29 @@
  */
 void rev_string(char *s)
 {
+
 	int MAX;
 	int MIN;
 	int tmp;
 
 	MAX = 0;
 	MIN = 0;
-	while (s[MAX] != '\n')
+	while (s[MAX] != '\0')
 	{
 		MAX++;
 	}
+	printf("%d", MAX);
 	if (MAX > 0)
 	{
 		MAX--;
-		while (1)
+		printf("%d", MAX);
+		while ((MAX != MIN) && (MAX > MIN) && (MAX >= 0))
 		{
-			if (MAX == MIN || MAX < MIN)
-			{
-				break;
-			}
-			else
-			{
-				tmp = s[MAX];
-				s[MAX] = s[MIN];
-				s[MIN] = tmp;
-				MAX--;
-				MIN++;
-			}
+			tmp = s[MAX];
+			s[MAX] = s[MIN];
+			s[MIN] = tmp;
+			MAX--;
+			MIN++;
 		}
-	}
-	else
-	{
-		return;
 	}
 }
