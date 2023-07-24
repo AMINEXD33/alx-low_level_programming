@@ -20,7 +20,6 @@ void rev_string(char *s)
 	if (MAX > 0)
 	{
 		MAX--;
-		printf("%d", MAX);
 		while ((MAX != MIN) && (MAX > MIN) && (MAX >= 0))
 		{
 			tmp = s[MAX];
