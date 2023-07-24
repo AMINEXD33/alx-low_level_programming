@@ -1,1 +1,1 @@
-c programmin
+POINTERS and stuff
