@@ -17,7 +17,7 @@ void puts_half(char *str)
 		len++;
 	}
 	if (len > 0)
-	{	
+	{		
 		if (((len) % 2)  == 0)
 		{
 			tracker = len / 2;
@@ -28,7 +28,7 @@ void puts_half(char *str)
 		}
 		while (str[tracker] != '\0')
 		{
-			_putchar(str[tracker]);
+			_putchar('str[tracker]');
 			tracker++;
 		}
 	}
