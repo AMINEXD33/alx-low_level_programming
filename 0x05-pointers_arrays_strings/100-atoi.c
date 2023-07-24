@@ -30,7 +30,7 @@ int _atoi(char *s)
 {
 	int i;
 	int negative;
-	int value;
+	unsigned int value;
 
 	negative = 0;
 	i = 0;
@@ -45,7 +45,7 @@ int _atoi(char *s)
 				{
 					if ((negative % 2) == 1)
 						return (value * -1);
-					else if ((negative % 2) == 0)
+					else if ((negative %2) == 0)
 						return (value);
 				}
 				value = value * 10 + (s[i] - '0');
