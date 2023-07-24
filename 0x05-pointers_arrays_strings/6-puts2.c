@@ -31,4 +31,5 @@ void puts2(char *str)
 		tracker++;
 
 	}
+	_putchar('\n');
 }
