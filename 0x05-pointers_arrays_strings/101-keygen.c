@@ -18,7 +18,8 @@ void  generate()
     int value = 0;
     int standard = (int) * "B";
     int count = 0;
-    
+    char *password;
+    int counter;
     while (value <= 2772)
     {
         if (value + standard > 2772)
@@ -27,8 +28,8 @@ void  generate()
         count++;
     }
         
-    char *password = (char*)malloc((count +1) * sizeof(char));
-    int counter = 0;
+    password = (char*)malloc((count +1) * sizeof(char));
+    counter = 0;
     while (counter <= count)
     {
         if (count == counter)
