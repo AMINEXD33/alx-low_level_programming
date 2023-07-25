@@ -51,5 +51,5 @@ void  generate()
 int main()
 {
 	generate();
-	return (0);
+	return (1);
 }
