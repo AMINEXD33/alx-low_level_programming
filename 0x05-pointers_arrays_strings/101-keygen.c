@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *generate - generate a password for 101-keygen.c
  *
@@ -26,7 +27,7 @@ void  generate()
         count++;
     }
         
-    char password[count+1];
+    char *password = (char*)malloc((count +1) * sizeof(char));
     int counter = 0;
     while (counter <= count)
     {
