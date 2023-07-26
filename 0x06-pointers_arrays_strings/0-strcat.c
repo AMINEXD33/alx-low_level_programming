@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * *_strcat - concatenates a string to another  src - > dest
  *
@@ -18,8 +19,6 @@ char *_strcat(char *dest, char *src)
 	{
 		if (dest[cursorII] == '\0')
 		{
-			dest[cursorII] = ' ';
-			cursorII++;
 			while (src[cursor] != '\0')
 			{
 				dest[cursorII] = src[cursor];
