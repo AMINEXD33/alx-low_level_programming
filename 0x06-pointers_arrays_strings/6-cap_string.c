@@ -49,7 +49,7 @@ char *cap_string(char *s)
 		}
 		else if (flag == 1 && (s[cur] >= 97 && s[cur] <= 122))
 		{
-			s[cur] = (char)(s[cur] - 32);
+			s[cur] = (char)(s[cur] - CONST);
 			flag = 0;
 		}
 		else if (is_in(s[cur], list) == 1)
