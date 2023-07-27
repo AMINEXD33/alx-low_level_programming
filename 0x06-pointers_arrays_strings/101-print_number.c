@@ -5,7 +5,7 @@
  *
  *
  */
-void print_number(int n)
+void print_number(unsigned int n)
 {
 	int flag;
 	int flag2;
