@@ -43,7 +43,7 @@ char *cap_string(char *s)
 	cur = 0;
 	while (s[cur] != '\0')
 	{
-		if ((s[cur] >= 65 && s[cur] <= 90) || (s[cur] >= 48 && s[cur] <=57))
+		if ((s[cur] >= 65 && s[cur] <= 90) || (s[cur] >= 48 && s[cur]  <= 57))
 		{
 			flag = 0;
 		}
