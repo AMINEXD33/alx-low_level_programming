@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *
  *
@@ -9,6 +10,7 @@ void print_number(int n)
 {
 	int flag;
 	int flag2;
+	int tmp;
 
 	if (n == 0)
 	{
@@ -30,11 +32,14 @@ void print_number(int n)
 				flag2 = 1;
 			}
 			_putchar((n % 10) + '0');
+			tmp += n*10;
 		}
 		else
 		{
 			_putchar((n % 10) + '0');
+			
 		}
-		n /= 10;
+		n %= 10;
 	}
+	printf("%d", tmp);
 }
