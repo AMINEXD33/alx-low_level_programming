@@ -56,5 +56,5 @@ char *_strstr(char *s, char *needle)
 		}	
 		X++;
 	}	
-	return("NULL");
+	return(NULL);
 }
