@@ -14,7 +14,7 @@ int checker(char *haystack, int position, char *needle)
 
 	flag = 1;
 	x = 0;
-	while (needle[x] != '\0')
+	while (needle[x] != '\0' && haystack[position + x] != '\0')
 	{
 		if (haystack[position + x] != needle[x])
 		{
