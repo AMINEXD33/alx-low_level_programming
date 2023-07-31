@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
  * checker - checks is the the following bytes are exactly equal to needle
  *@haystack: string we're searching in
@@ -14,13 +15,19 @@ int checker(char *haystack, int position, char *needle)
 
 	flag = 1;
 	x = 0;
-	while (needle[x] != '\0' && haystack[position + x] != '\0')
+	while (needle[x] != '\0' && haystack [x + position]!= '\0')
 	{
 		if (haystack[position + x] != needle[x])
 		{
 			flag = 0;
+			break;
 		}
 		x++;
+		if (haystack[position + x] == '\0' && needle[x] != '\0')
+		{
+			flag = 0;
+			break;
+		}
 	}
 	return (flag);
 }
