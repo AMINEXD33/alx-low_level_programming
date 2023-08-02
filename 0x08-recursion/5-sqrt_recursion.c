@@ -15,7 +15,7 @@ int helper(int n, int start, int end)
 
 
 		mid = start + (end - start) / 2;
-		sq = mid * mid;
+		unsigned long sq = mid * mid;
 		if (sq == n)
 		{
 			return (mid);
