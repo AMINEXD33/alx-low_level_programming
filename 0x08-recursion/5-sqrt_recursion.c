@@ -6,16 +6,16 @@
  *@end: end position
  *Return: (Naturale sq root of n )
  */
-int helper(int n, int start, int end)
+int helper(unsigned long n, unsigned long start, unsigned long end)
 {
 	if (start <= end)
 	{
-		int mid;
-		int sq;
+		unsigned long mid;
+		unsigned long sq;
 
 
 		mid = start + (end - start) / 2;
-		unsigned long sq = mid * mid;
+		sq = (unsigned long)mid * mid;
 		if (sq == n)
 		{
 			return (mid);
