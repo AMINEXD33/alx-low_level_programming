@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	argv++; /*skiping the prog name*/
 	while (*argv != NULL)
 	{
-		if (isdigit(**argv))
+		if (((**argv) >= 48 && (**argv) <= 57) || (**argv) == 45)
 		{
 			num = atoi(*argv);
 			if (num >= 0)
