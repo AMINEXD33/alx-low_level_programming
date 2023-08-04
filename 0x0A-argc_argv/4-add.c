@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned int SUM;
-	unsigned int num;
+	int SUM;
+	int num;
 
 
 	SUM = 0;
