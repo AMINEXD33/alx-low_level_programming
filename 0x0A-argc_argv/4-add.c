@@ -17,13 +17,10 @@ int main(int argc, char *argv[])
 	argv++; /*skiping the prog name*/
 	while (*argv != NULL)
 	{
-		if (((**argv) >= 48 && (**argv) <= 57) || (**argv) == 45)
+		if (isdigit(**argv))
 		{
 			num = atoi(*argv);
-			if (num >= 0)
-			{
-				SUM += num;
-			}
+			SUM += num;
 		}
 		else
 		{
@@ -31,11 +28,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 		argv++;
-	}
-	if (*argv != NULL)
-	{
-		printf("Error\n");
-		return (1);
 	}
 	argc = argc;
 	printf("%d\n", SUM);
