@@ -32,6 +32,11 @@ int main(int argc, char *argv[])
 		}
 		argv++;
 	}
+	if (*argv != NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	argc = argc;
 	printf("%d\n", SUM);
 	return (0);
