@@ -1,7 +1,7 @@
 #include "main.h"
 #include "stdlib.h"
 /**
- *free_grid - free a 2d array of a height 
+ *free_grid - free a 2d array of a height
  *@grid: is the 2d array
  *@height: the height
  */
