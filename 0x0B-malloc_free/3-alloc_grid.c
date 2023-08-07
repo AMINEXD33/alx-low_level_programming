@@ -44,7 +44,7 @@ int **alloc_grid(int width, int height)
 		{
 			Mem[x][y] = 0;
 		}
-	}	
-	
+	}
+
 	return (Mem);
 }
