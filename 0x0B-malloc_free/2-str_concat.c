@@ -50,6 +50,8 @@ char *str_concat(char *s1, char *s2)
 	if (Mem == NULL)
 		return (NULL);
 	/* concatenates */
+	X = 0;
+	Y = 0;
 	for (X = 0; X <= len1; X++)
 	{
 		Mem[X] = s1[X];
