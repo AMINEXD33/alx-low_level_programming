@@ -33,6 +33,7 @@ unsigned int len(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	unsigned int X;
+	unsigned int Y;
 	unsigned len1;
 	unsigned len2;
 	char *Mem;
@@ -49,18 +50,14 @@ char *str_concat(char *s1, char *s2)
 	if (Mem == NULL)
 		return (NULL);
 	/* concatenates */
-	X = 0;
-	while (X <= (len1 + len2 +2))
+	for (X = 0; X <= len1; X++)
 	{
-		if (X <= len1)
-		{
-			Mem[X] = s1[X];
-		}
-		if (X > len1)
-		{
-			Mem[X] = s2[(X - len1) - 1];
-		}
-		X++;
-	}	
+		Mem[X] = s1[X];
+	}
+	for (Y = 0; Y <= len2; Y++)
+	{
+		Mem[X + Y] = s2[Y];
+	}
+
 	return (Mem);
 }
