@@ -45,7 +45,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 		len2 = len(s2);
 	/*calculate and handling malloc*/
-	Mem = malloc(sizeof(char) * (len1 + len2 +2)); /*1 is or the ('\0')*/
+	Mem = malloc(sizeof(char) * (len1 + len2 +3)); 
 	if (Mem == NULL)
 		return (NULL);
 	/* concatenates */
