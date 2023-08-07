@@ -16,7 +16,7 @@ unsigned int len(char *s)
 	{
 		X++;
 	}
-	return (X - 1);
+	return (X);
 }
 
 
@@ -46,17 +46,17 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 		len2 = len(s2);
 	/*calculate and handling malloc*/
-	Mem = malloc(sizeof(char) * (len1 + len2 +3)); 
+	Mem = malloc(sizeof(char) * (len1 + len2 +1)); 
 	if (Mem == NULL)
 		return (NULL);
 	/* concatenates */
 	X = 0;
 	Y = 0;
-	for (X = 0; X <= len1; X++)
+	for (X = 0; X < len1; X++)
 	{
 		Mem[X] = s1[X];
 	}
-	for (Y = 0; Y <= len2; Y++)
+	for (Y = 0; Y < len2; Y++)
 	{
 		Mem[X + Y] = s2[Y];
 	}
