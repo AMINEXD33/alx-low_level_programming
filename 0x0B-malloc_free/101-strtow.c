@@ -22,11 +22,6 @@ void get_word(char *str, int *start, int *end)
 		{
 			if (str[x] == ' ')
 			{
-				if (str[x + 1] == '\0')
-				{
-					*end = x+1;
-					break;
-				}
 				*end = x;
 				break;
 			}
@@ -77,7 +72,7 @@ char **strtow(char *str)
 		get_word(str , &start, &end);	
 		Mem[x] = malloc(sizeof(char) * ( (end - start) + 1) );
 		Bytes = 0;
-		for (flag = start; flag < end; flag++)
+		for (flag = start; flag <= end; flag++)
 		{
 			Mem[x][Bytes] = str[flag];
 			Bytes ++;
