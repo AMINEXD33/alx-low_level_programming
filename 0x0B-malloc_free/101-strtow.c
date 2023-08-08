@@ -57,7 +57,7 @@ char **strtow(char *str)
 		}
 		if (flag == 1)
 		{
-			if (str[x] == ' ')
+			if (str[x] == ' ' || str[x + 1] == '\0')
 			{
 				flag = 0;
 				word++;
@@ -69,8 +69,7 @@ char **strtow(char *str)
 	end = 0;
 	for (x = 0; x < word; x++)
 	{
-		get_word(str , &start, &end);
-		printf("word %d , start = %d ,end = %d\n", x, start , end);
+		get_word(str , &start, &end);	
 		Mem[x] = malloc(sizeof(char) * ( (end - start) + 1) );
 		Bytes = 0;
 		for (flag = start; flag < end; flag++)
