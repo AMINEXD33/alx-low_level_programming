@@ -20,8 +20,13 @@ void get_word(char *str, int *start, int *end)
 		}
 		else
 		{
-			if (str[x] == ' ' || str[x + 1] == '\0')
+			if (str[x] == ' ')
 			{
+				if (str[x + 1] == '\0')
+				{
+					*end = x+1;
+					break;
+				}
 				*end = x;
 				break;
 			}
