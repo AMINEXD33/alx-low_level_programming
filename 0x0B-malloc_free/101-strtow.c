@@ -70,7 +70,7 @@ char **strtow(char *str)
 	for (x = 0; x < word; x++)
 	{
 		get_word(str , &start, &end);	
-		Mem[x] = malloc(sizeof(char) * ( (end - start) + 1) );
+		Mem[x] = malloc(sizeof(char) * ( (end - start) + 2) );
 		Bytes = 0;
 		for (flag = start; flag < end ; flag++)
 		{
