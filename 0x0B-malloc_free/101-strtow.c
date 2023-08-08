@@ -45,7 +45,7 @@ char **strtow(char *str)
 	int start;
 	int end;
 	
-	if (str == "" || str == " ")
+	if (str == NULL)
 		return (NULL);
 	word = 0;
 	Bytes = 0;
@@ -67,6 +67,8 @@ char **strtow(char *str)
 			}
 		}	
 	}
+	if(word == 0)
+		return (NULL);
 	Mem = malloc(sizeof(char *) * (word + 1));
 	start = 0;
 	end = 0;	
