@@ -77,7 +77,7 @@ char **strtow(char *str)
 			Mem[x][Bytes] = str[flag];
 			Bytes ++;
 		}
-		Byres++;
+		Bytes++;
 		Mem[x][Bytes] = '\0';
 	}
 	Mem[word] = NULL;
