@@ -28,6 +28,7 @@ void get_word(char *str, int *start, int *end)
 		}
 		x++;
 	}
+	*end = x;
 }
 /**
  *
@@ -43,7 +44,9 @@ char **strtow(char *str)
 	char **Mem;
 	int start;
 	int end;
-
+	
+	if (str == "" || str == " ")
+		return (NULL);
 	word = 0;
 	Bytes = 0;
 	Bytes++;
@@ -66,10 +69,10 @@ char **strtow(char *str)
 	}
 	Mem = malloc(sizeof(char *) * (word + 1));
 	start = 0;
-	end = 0;
+	end = 0;	
 	for (x = 0; x < word; x++)
 	{
-		get_word(str , &start, &end);	
+		get_word(str , &start, &end);
 		Mem[x] = malloc(sizeof(char) * ( (end - start) + 2) );
 		Bytes = 0;
 		for (flag = start; flag < end ; flag++)
@@ -81,6 +84,5 @@ char **strtow(char *str)
 		Mem[x][Bytes] = '\0';
 	}
 	Mem[word] = NULL;
-
 	return (Mem);
 }
