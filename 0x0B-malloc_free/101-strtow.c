@@ -80,6 +80,6 @@ char **strtow(char *str)
 		Mem[x][Bytes] = '\0';
 	}
 	Mem[word] = NULL;
-	printf("word in string = %d\n", word);
+
 	return (Mem);
 }
