@@ -21,7 +21,7 @@ void set_to_zero(int nmemb, char *Mem)
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *Mem;
+	void *Mem;
 
 	/*handle nmemb and size side cases*/
 	if (size == 0 || nmemb == 0)
