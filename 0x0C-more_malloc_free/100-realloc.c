@@ -24,7 +24,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	else if (ptr == NULL)
 	{
 		Mem = malloc(new_size);
-		return Mem;
+		return (Mem);
 	}
 	/*allocation*/
 	Mem = malloc(new_size);
