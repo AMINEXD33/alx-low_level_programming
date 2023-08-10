@@ -12,9 +12,9 @@ void set_to_zero(int nmemb, char *Mem)
 	int x;
 
 	char *pointer = (char *)Mem;
-	
+
 	for (x = 0; x < nmemb; x++)
-        pointer[x] = '\0';
+		pointer[x] = '\0';
 }
 /**
 *_calloc - allocate a chunck of memory and set it to 0
