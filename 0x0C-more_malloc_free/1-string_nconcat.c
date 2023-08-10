@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+/**
+ *len - calc the length of a sting
+ *@string:is the string
+ *Return: lenght of the string
+ */
 int len(char *string)
 {
 	int x;
@@ -13,14 +18,11 @@ int len(char *string)
 	return (x);
 }
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *string_nconcat- concat s1 and n of s2
+ *@s1: string1
+ *@s2: string2
+ *@n: allowed bytes from string2
+ *Return: Addr of the new allocated memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
