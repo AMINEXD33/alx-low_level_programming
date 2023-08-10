@@ -7,12 +7,12 @@
 *@nmemb: n elemts
 *@Mem: memory chunck
 */
-void set_to_zero(int nmemb, void *Mem)
+void set_to_zero(int nmemb, char *Mem)
 {
 	int x;
 
 	for (x = 0; x < nmemb; x++)
-		*((char *)Mem + x) = '\0';
+		Mem[x] = 0;
 }
 /**
 *_calloc - allocate a chunck of memory and set it to 0
@@ -34,7 +34,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (Mem == NULL)
 		return (NULL);
 	/*set every byte to 0*/
-	set_to_zero(nmemb, Mem);
+	set_to_zero(nmemb * size, Mem);
 
 
 	return (Mem);
