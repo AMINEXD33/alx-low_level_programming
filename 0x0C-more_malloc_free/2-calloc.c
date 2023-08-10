@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 /**
 *set_to_zero- sets every bytes in an array to 0
 *@nmemb: n elemts
