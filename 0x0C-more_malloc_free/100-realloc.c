@@ -16,7 +16,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	/*handle size cases*/
 	if (old_size == new_size)
 		return (ptr);
-	else if (new_size == 0 || ptr == NULL)
+	else if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
