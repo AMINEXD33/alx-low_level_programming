@@ -10,8 +10,10 @@ void set_to_zero(int nmemb, char *Mem)
 {
 	int x;
 
+	char *pointer = (char *)Mem;
+	
 	for (x = 0; x < nmemb; x++)
-		Mem[x] = '\0';
+        pointer[x] = '\0';
 }
 /**
 *_calloc - allocate a chunck of memory and set it to 0
@@ -25,6 +27,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	/*handle nmemb and size side cases*/
 	if (size == 0 || nmemb == 0)
+		return (NULL);
+	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	/*allocation*/
 	Mem = malloc(nmemb * size);
