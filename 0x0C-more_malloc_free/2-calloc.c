@@ -20,7 +20,7 @@ void set_to_zero(int nmemb, char *Mem)
 *@size: is the size of each element
 *Return: addr of the new allocated memory , or NULL if it failed
 */
-char *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *Mem;
 
