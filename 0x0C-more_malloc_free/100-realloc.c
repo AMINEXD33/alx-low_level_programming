@@ -1,13 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
-*
-*
-*
-*
-*
+*_realloc- reallocate a new chunck of memory
+*@ptr: old mempry chunck
+*@old_size: the old size of ptr
+*@new_size: is the Memory size
+*Return: Addr of the new allocated memory, else NULL
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
