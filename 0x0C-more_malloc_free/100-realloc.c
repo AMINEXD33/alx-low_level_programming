@@ -23,12 +23,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	/*allocation*/
-	Mem = malloc(sizeof(char) * new_size);
+	Mem = malloc(new_size);
 	if (Mem == NULL)
 		return (NULL);
 	/*copy values*/
 	pt_r = (char *)ptr;
-	for (x = 0; x < old_size && x <= new_size; x++)
+	for (x = 0; x < old_size && x < new_size; x++)
 	{
 		Mem[x] = pt_r[x];
 	}
