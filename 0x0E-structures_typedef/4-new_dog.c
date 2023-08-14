@@ -7,7 +7,7 @@
  *@dest: destination str
  *@len: len of both str
  */
-void copy_str(char *str, char*dest, int len)
+void copy_str(char *str, char *dest, int len)
 {
 	int x;
 
@@ -18,8 +18,9 @@ void copy_str(char *str, char*dest, int len)
 	dest[x] = '\0';
 }
 /**
- *len - calc len of an str
+ *len- calc len of an str
  *@str: string
+ *Return: lengh of str
  */
 int len(char *str)
 {
@@ -39,7 +40,7 @@ int len(char *str)
  *@owner: name of the owner
  *Return: the new created struct
  */
-dog_t *new_dog(char *name, float age, char *owner)
+dog_t  *new_dog(char *name, float age, char *owner)
 {
 	int len_;
 	char *name2;
@@ -53,7 +54,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	name2 = malloc(sizeof(char) * (len_ + 1));
 	if (name2 == NULL)
 		return (NULL);
-	copy_str(name, name2 , len_);
+	copy_str(name, name2, len_);
 
 	len_ = len(owner);
 	owner2 = malloc(sizeof(char) * (len_ + 1));
@@ -71,8 +72,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	new_dog_ptr->name = name2;
 	new_dog_ptr->age = age;
-	new_dog_ptr->owner = owner;
+	new_dog_ptr->owner = owner2;
 
-
-	return(new_dog_ptr);
+	return (new_dog_ptr);
 }
