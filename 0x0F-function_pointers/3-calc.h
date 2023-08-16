@@ -13,13 +13,17 @@ int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 #endif /*_3_get_op_func_H*/
 
-/*struct op - Struct op
+#ifndef _op_H
+#define _op_H
+/**
+* struct op - Struct op
 *
 * @op: The operator
 * @f: The function associated
 */
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
+#endif /*_op_H*/
