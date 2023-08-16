@@ -6,14 +6,16 @@
 *@array: array of ints
 *@size: the size of the array
 *@cmp: address of an other function
+*Return: index if cmp function is satisfied , -1 if an error
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int index;
+
 	if (array != NULL && cmp != NULL && size > 0)
 	{
 		index = 0;
-		while(index < size)
+		while (index < size)
 		{
 			if (cmp(array[index] != 0))
 				return (index);
