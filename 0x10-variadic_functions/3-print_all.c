@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 		var_len = 0;
 		while (var_len < 4)
 		{
-			if (Choice[var_len].type == format[x] && var_len < 4)
+			if (Choice[var_len].type == format[x])
 			{
 				printf("%s", separator);
 				Choice[var_len].f(ap);
@@ -75,7 +75,7 @@ void print_int(va_list ap)
  */
 void print_float(va_list ap)
 {
-	double num;
+	float num;
 
 	num = va_arg(ap, double);
 	printf("%f", num);
