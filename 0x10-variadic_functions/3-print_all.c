@@ -24,6 +24,7 @@ void print_all(const char * const format, ...)
 	int x;
 	unsigned int var_len;
 	va_list ap;
+	char *separator;
 	struct choice Choice[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -31,6 +32,7 @@ void print_all(const char * const format, ...)
 		{'s', print_str},
 	};
 
+	separator = "";
 	va_start(ap, format);
 	/*get the len of the var list*/
 	x = 0;
@@ -39,12 +41,13 @@ void print_all(const char * const format, ...)
 		var_len = 0;
 		while (var_len < 4)
 		{
-			if (Choice[var_len].type == format[x] && var_len < 3)
+			if (Choice[var_len].type == format[x] && var_len < 4)
 			{
-				printf(", ");
+				printf("%s",separator);
+				Choice[var_len].f(ap);
+				separator = ", ";
 				break;
 			}
-			Choice[var_len].f(ap);
 			var_len++;
 		}
 		x++;
