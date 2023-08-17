@@ -2,50 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_int(va_list ap);
-void print_char(va_list ap);
-void print_float(va_list ap);
-void print_str(va_list ap);
-/**
- * print_all-print variables, depending on the specifiers
- * @format: specifiers array
- */
-void print_all(const char * const format, ...)
-{
-	int x;
-	unsigned int var_len;
-	va_list ap;
-	char *separator;
-
-	choice Choice[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_str},
-	};
-
-	separator = "";
-	va_start(ap, format);
-	/*get the len of the var list*/
-	x = 0;
-	while (format[x] != '\0' && format != NULL)
-	{
-		var_len = 0;
-		while (var_len < 4)
-		{
-			if (Choice[var_len].type == format[x])
-			{
-				printf("%s", separator);
-				Choice[var_len].f(ap);
-				separator = ", ";
-			}
-			var_len++;
-		}
-		x++;
-	}
-	printf("\n");
-	va_end(ap);
-}
 /**
  * print_char-print a char from a va_list
  * @ap: the variable list
@@ -95,3 +51,44 @@ void print_str(va_list ap)
 	}
 	printf("%s", str);
 }
+/**
+ * print_all-print variables, depending on the specifiers
+ * @format: specifiers array
+ */
+void print_all(const char * const format, ...)
+{
+	int x;
+	unsigned int var_len;
+	va_list ap;
+	char *separator;
+
+	choice Choice[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_str},
+	};
+
+	separator = "";
+	va_start(ap, format);
+	/*get the len of the var list*/
+	x = 0;
+	while (format[x] != '\0' && format != NULL)
+	{
+		var_len = 0;
+		while (var_len < 4)
+		{
+			if (Choice[var_len].type == format[x])
+			{
+				printf("%s", separator);
+				Choice[var_len].f(ap);
+				separator = ", ";
+			}
+			var_len++;
+		}
+		x++;
+	}
+	printf("\n");
+	va_end(ap);
+}
+
