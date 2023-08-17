@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	/*get the len of the var list*/
 	x = 0;
-	while (format[x] != '\0')
+	while (format[x] != '\0' && format)
 	{
 		var_len = 0;
 		while (var_len < 4)
