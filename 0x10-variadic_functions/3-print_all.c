@@ -1,16 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-/**
- * struct choice- the type and its correct printing function
- * @type: the type , char , int , float , string
- * @f:the correct function to print the type
- */
-typedef struct choice
-{
-	char type;
-	void(*f)(va_list);
-} choice_;
+
 void print_int(va_list ap);
 void print_char(va_list ap);
 void print_float(va_list ap);
@@ -25,7 +16,8 @@ void print_all(const char * const format, ...)
 	unsigned int var_len;
 	va_list ap;
 	char *separator;
-	struct choice Choice[] = {
+
+	choice Choice[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
@@ -43,7 +35,7 @@ void print_all(const char * const format, ...)
 		{
 			if (Choice[var_len].type == format[x] && var_len < 4)
 			{
-				printf("%s",separator);
+				printf("%s", separator);
 				Choice[var_len].f(ap);
 				separator = ", ";
 				break;
@@ -65,7 +57,6 @@ void print_char(va_list ap)
 
 	c = va_arg(ap, int);
 	printf("%c", c);
-
 }
 /**
  * print_int-print an int from a va_list

@@ -22,6 +22,16 @@ void print_strings(const char *separator, const unsigned int n, ...);
 #ifndef _3print_all_H
 #define _3print_all_H
 void print_all(const char * const format, ...);
-
+/**
+ * struct choice- the type and its correct printing function
+ * @type: the type , char , int , float , string
+ * @f:the correct function to print the type
+ */
+#include <stdarg.h>
+typedef struct
+{
+	char type;
+	void(*f)(va_list);
+} choice;
 #endif /*_3print_all*/
 
