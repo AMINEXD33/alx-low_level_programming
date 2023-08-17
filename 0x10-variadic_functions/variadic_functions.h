@@ -23,6 +23,5 @@ void print_strings(const char *separator, const unsigned int n, ...);
 #define _3print_all_H
 void print_all(const char * const format, ...);
 
-
 #endif /*_3print_all*/
 
