@@ -42,8 +42,7 @@ void print_all(const char * const format, ...)
 			if (Choice[var_len].type == format[x])
 			{
 				Choice[var_len].f(ap);
-				if (var_len < 3)
-					printf(", ");
+				printf(", ");
 				break;
 			}
 			var_len++;
