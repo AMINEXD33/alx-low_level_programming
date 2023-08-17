@@ -12,3 +12,8 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 #define _putchar_H
 int _putchar(char c);
 #endif /*_putchar_H*/
+
+#ifndef _2print_strings_H
+#define _2print_strings_H
+void print_strings(const char *separator, const unsigned int n, ...);
+#endif /*print_strings*/
