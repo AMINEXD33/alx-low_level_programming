@@ -33,5 +33,6 @@ typedef struct choice
 	char type;
 	void(*f)(va_list);
 } choice_;
+
 #endif /*_3print_all*/
 
