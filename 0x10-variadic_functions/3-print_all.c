@@ -76,19 +76,18 @@ void print_all(const char * const format, ...)
 	while (format[x] != '\0' && format != NULL)
 	{
 		var_len = 0;
-		while (var_len < 4)
+		while (var_len < 4 &&(format[x] != Choice[var_len].type))
 		{
-			if (Choice[var_len].type == format[x])
-			{
-				printf("%s", separator);
-				Choice[var_len].f(ap);
-				separator = ", ";
-			}
 			var_len++;
+		}
+		if (var_len < 4)
+		{
+			printf("%s", separator);
+			Choice[var_len].f(ap);
+			separator = ", ";
 		}
 		x++;
 	}
 	printf("\n");
 	va_end(ap);
 }
-
