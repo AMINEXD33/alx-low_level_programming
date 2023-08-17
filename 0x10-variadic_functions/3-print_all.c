@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	/*get the len of the var list*/
 	x = 0;
-	while (format[x] != '\0' && format)
+	while (format[x] != '\0' && format != NULL)
 	{
 		var_len = 0;
 		while (var_len < 4)
@@ -38,7 +38,6 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				Choice[var_len].f(ap);
 				separator = ", ";
-				break;
 			}
 			var_len++;
 		}
