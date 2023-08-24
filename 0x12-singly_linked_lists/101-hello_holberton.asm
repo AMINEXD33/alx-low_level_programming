@@ -6,8 +6,8 @@ section .text
     extern printf
 
 main:
-    sub rsp, 8           
-    mov rdi, hello_msg  
-    call printf         
-    add rsp, 8           
-    ret                 
+    sub rsp, 8
+    mov rdi, hello_msg
+    call printf
+    add rsp, 8
+    ret
