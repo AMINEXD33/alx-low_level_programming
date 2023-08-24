@@ -13,8 +13,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *tmp;
 	/*malloc and configure the node and tmp node*/
 	new_node = malloc(sizeof(list_t));
-	tmp = malloc(sizeof(list_t));
-	if (new_node == NULL || tmp == NULL)
+
+	if (new_node == NULL)
 	{
 		free(new_node);
 		return (NULL);
