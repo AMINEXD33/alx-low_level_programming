@@ -13,6 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *TMP_NODE, *PRV_NODE, *NODE;
 	unsigned int target;
 
+	NODE = malloc(sizeof(listint_t));
 	if ((*head) == NULL)
 	{
 		NODE->n = n;
@@ -30,7 +31,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	if (target == idx)/*target node found , adding the new node*/
 	{
-		NODE = malloc(sizeof(listint_t));
 		if (NODE == NULL)
 		{
 			free(NODE);
