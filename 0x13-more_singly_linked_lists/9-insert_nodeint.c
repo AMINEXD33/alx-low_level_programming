@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * insert_nodeint_at_index-insert a node at an idex
  * @head: the head of the linked list
@@ -10,31 +11,21 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *TMP_NODE, *PRV_NODE, *NODE;
-	unsigned int target, flag;
+	unsigned int target;
 
 	if ((*head) == NULL)
 		return (NULL);
-	/*finding the target*/
-	TMP_NODE = (*head);
+	TMP_NODE = (*head);/*finding the target*/
 	target = 0;
-	flag = 0;
-	while (TMP_NODE->next != NULL) 
+	while (TMP_NODE->next != NULL)
 	{
 		if (target == idx)
-		{
-			flag = 1;
 			break;
-		}
 		target++;
 		PRV_NODE = TMP_NODE;
 		TMP_NODE = TMP_NODE->next;
 	}
-	if (target == idx)
-	{
-		flag = 1;
-	}	
-	/*target node found , adding the new node*/
-	if (flag == 1)
+	if (target == idx)/*target node found , adding the new node*/
 	{
 		NODE = malloc(sizeof(listint_t));
 		if (NODE == NULL)
@@ -43,16 +34,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		}
 		NODE->n = n;
-		NODE->next = TMP_NODE;
-		if (PRV_NODE == NULL)
+		if (target == 0)
 		{
+			NODE->next = (*head);
 			(*head) = NODE;
-			return((*head));
+			return ((*head));
 		}
 		else
+		{
+			NODE->next = TMP_NODE;
 			PRV_NODE->next = NODE;
-		return (NODE);
+			return (NODE);
+		}
 	}
-	/*target node not found, returning NULL*/
 	return (NULL);
 }
