@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	TMP_NODE = (*head);
 	target = 0;
 	flag = 0;
-	while (TMP_NODE->next != NULL && target <= idx) 
+	while (TMP_NODE->next != NULL) 
 	{
 		if (target == idx)
 		{
