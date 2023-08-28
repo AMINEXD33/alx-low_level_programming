@@ -29,6 +29,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		PRV_NODE = TMP_NODE;
 		TMP_NODE = TMP_NODE->next;
 	}
+	if (target == idx)
+	{
+		flag = 1;
+	}	
 	/*target node found , adding the new node*/
 	if (flag == 1)
 	{
