@@ -15,4 +15,5 @@ int sum_listint(listint_t *head)
 		head = head->next;
 	}
 	summ += head->n;
+	return(summ);
 }
