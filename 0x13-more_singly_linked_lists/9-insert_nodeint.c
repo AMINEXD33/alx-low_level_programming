@@ -14,7 +14,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int target;
 
 	if ((*head) == NULL)
-		return (NULL);
+	{
+		NODE->n = n;
+		return(NODE);
+	}
 	TMP_NODE = (*head);/*finding the target*/
 	target = 0;
 	while (TMP_NODE->next != NULL)
@@ -47,5 +50,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NODE);
 		}
 	}
-	return ((*head));
+	return (NULL);
 }
