@@ -40,7 +40,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		NODE->n = n;
 		NODE->next = TMP_NODE;
-		PRV_NODE->next = NODE;
+		if (PRV_NODE == NULL)
+			(*head) = NODE;
+		else
+			PRV_NODE->next = NODE;
 		return (NODE);
 	}
 	/*target node not found, returning NULL*/
