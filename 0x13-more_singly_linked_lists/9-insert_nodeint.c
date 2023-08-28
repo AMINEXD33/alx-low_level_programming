@@ -32,8 +32,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	if (idx == 0)
 	{
-		TMP_NODE->next = *head;
-		*head = TMP_NODE;
+		NODE->next = *head;
+		*head = NODE;
 	}
 	else if (TMP_NODE->next != NULL)
 	{
