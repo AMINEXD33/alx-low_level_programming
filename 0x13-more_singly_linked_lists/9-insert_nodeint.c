@@ -10,40 +10,31 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *TMP_NODE, *NODE;
-	unsigned int target;
+	listint_t *new_node, *node_to_insert_after;
+	unsigned int i = 0;
 
-	TMP_NODE = (*head);
-	NODE = malloc(sizeof(listint_t));
-	if ((TMP_NODE == NULL && idx != 0) || NODE == NULL)
-	{
-		free(NODE);
+	node_to_insert_after = *head;
+	new_node = malloc(sizeof(listint_t));
+	if (!new_node)
 		return (NULL);
-	}
-	NODE->n = n;
-	for (target = 0; *head != NULL && target < idx - 1; target++)
-	{
-		TMP_NODE = TMP_NODE->next;
-		if (TMP_NODE == NULL)
-		{
-			free(NODE);
-			return (NULL);
-		}
-	}
+	new_node->n = n;
 	if (idx == 0)
 	{
-		NODE->next = *head;
-		*head = NODE;
+		new_node->next = node_to_insert_after;
+		*head = new_node;
+		return (new_node);
 	}
-	else if (TMP_NODE->next != NULL)
+	while (i < idx - 1)
 	{
-		NODE->next = TMP_NODE->next;
-		TMP_NODE->next = NODE;
+		if (!node_to_insert_after)
+		{
+			free(new_node);
+			return (NULL);
+		}
+node_to_insert_after = node_to_insert_after->next;
+i++;
 	}
-	else
-	{
-		NODE->next = NULL;
-		TMP_NODE->next = NODE;
-	}
-	return (NODE);
+	new_node->next = node_to_insert_after->next;
+	node_to_insert_after->next = new_node;
+	return (new_node);
 }
