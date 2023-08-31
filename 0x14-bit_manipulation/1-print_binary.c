@@ -12,7 +12,7 @@ void get_binary(unsigned long int n)
 	{
 		get_binary(n >> 1);
 		x = (n & (1));
-		printf("%d", x);
+		printf("%c", x + '0');
 	}
 }
 /**
@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
 {
 	if (n == 0)
 	{
-		printf("%d", 0);
+		printf("%c", '0');
 		return;
 	}
 	get_binary(n);
