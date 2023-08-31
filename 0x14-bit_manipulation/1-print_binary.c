@@ -6,10 +6,13 @@
  */
 void get_binary(unsigned long int n)
 {
+	int x;
+
 	if (n != 0)
 	{
 		get_binary(n / 2);
-		printf("%ld", n % 2);
+		x = (n & (1));
+		printf("%d", x);
 	}
 }
 /**
