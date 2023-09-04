@@ -18,6 +18,8 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 		return (0);
 	/*open the file*/
 	fp  = open(filename, O_RDONLY);
+    if (fp == -1)
+        return (0);
 	/*handle allocation*/
 	BUFFER = malloc(sizeof(char) * letters);
 	if (BUFFER == NULL)
