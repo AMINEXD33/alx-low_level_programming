@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	}
 	/*write the bytes of size letters to the STDOUT*/
 	write_count = write(1, BUFFER, read_count);
-	if (write_count == -1 || write_count != read_count)
+	if (write_count == -1 || (write_count != read_count))
 	{
 		free(BUFFER);
 		return (0);
