@@ -32,11 +32,17 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	/*read bytes of size letters from the file*/
 	read_count = read(fp, BUFFER, letters);
 	if (read_count == -1)
+	{
+		free(BUFFER);
 		return (0);
+	}
 	/*write the bytes of size letters to the STDOUT*/
 	write_count = write(1, BUFFER, read_count);
 	if (write_count == -1 || write_count != read_count)
+	{
+		free(BUFFER);
 		return (0);
+	}
 	free(BUFFER);
 	close(fp);
 	return (write_count);
