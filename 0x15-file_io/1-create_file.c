@@ -20,9 +20,9 @@ int create_file(const char *filename, char *text_content)
 	unsigned int len;
 	mode_t FILE_PERMITIONS;
 
-	len = strlen(text_content);
-	if (len == 0)
+	if (text_content == NULL)
 		return (1);
+	len = strlen(text_content);
 	/*read and write permission for the owner*/
 	FILE_PERMITIONS = S_IRUSR | S_IWUSR;
 	if (filename == NULL)
@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 		if (file == -1)
 			return (-1);
 	}
-	if (flag == 0 && len > 0)/*exists*/
+	if (flag == 0)/*exists*/
 	{
 		trunc_code = ftruncate(file, len);
 		if (trunc_code != 0)
