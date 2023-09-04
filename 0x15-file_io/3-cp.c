@@ -17,18 +17,18 @@ void cant_write_err(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_);
  */
 int main(int argc, char **argv)
 {
+	struct BUFFER *BUFFER_;
 	/*exits if args are not availble*/
 	if (argc != 3)
 	{
 		printf("Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	struct  BUFFER *BUFFER_;
-
 	BUFFER_ = malloc(sizeof(buffer));
 	read_to_BUFFER(argv[1], BUFFER_);
 	write_to_file(argv[2], BUFFER_);
 	free(BUFFER_);
+	return (1);
 }
 /**
  *write_to_file- write the BUFFER to a file
@@ -88,9 +88,8 @@ int write_to_file(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 int read_to_BUFFER(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 {
 	int file, close_code;
-	unsigned int FILE_LEN, CHUNK_SIZE, CHUNK_COUNT, offset;
-	unsigned long int bytes_read;
-	char str[2];
+	unsigned int CHUNK_SIZE, CHUNK_COUNT, offset;
+	long int bytes_read;
 
 	CHUNK_SIZE  = 1024; /*track the size*/
 	CHUNK_COUNT = 1024;/*track the times we added 1024*/
@@ -99,7 +98,6 @@ int read_to_BUFFER(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 	BUFFER_->size = 0;
 	if (BUFFER_->string == NULL)
 		cant_read_err(NAME_OF_THE_FILE, BUFFER_);
-	FILE_LEN = 0;
 	file = open(NAME_OF_THE_FILE, O_RDONLY);
 	if (file == -1)
 		cant_read_err(NAME_OF_THE_FILE, BUFFER_);
