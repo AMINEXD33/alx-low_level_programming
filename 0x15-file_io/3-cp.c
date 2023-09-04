@@ -65,7 +65,6 @@ int write_to_file(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 	}
 	else
 	{
-		printf("NO TRUNC !");
 		write_code = write(file, BUFFER_->string, BUFFER_->size);
 		if (write_code == -1)
 			cant_write_err(NAME_OF_THE_FILE, BUFFER_);
