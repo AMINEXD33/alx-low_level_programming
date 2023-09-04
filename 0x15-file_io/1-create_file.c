@@ -5,11 +5,11 @@
 #include <sys/stat.h>
 #include <string.h>
 /**
- * 
- * 
- * 
- * 
- * 
+ * create_file- write content to a file , if it exists
+ * , if not the function will create it and write to it
+ * @filename: is the file name
+ * @text_content: the content that the function will write to the file
+ * Return: 0 if ok , -1 if an error raised
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -24,40 +24,30 @@ int create_file(const char *filename, char *text_content)
 	/*read and write permission for the owner*/
 	FILE_PERMITIONS = S_IRUSR | S_IWUSR;
 	if (filename == NULL)
-	{
-		return(-1);
-	}
-	file = open(filename,O_RDWR,FILE_PERMITIONS);/*file already exists*/
+		return (-1);
+	file = open(filename, O_RDWR, FILE_PERMITIONS);/*file already exists*/
 	flag = 0;
 	if (file == -1)
 	{
-		file = open(filename,O_CREAT | O_RDWR,FILE_PERMITIONS);/*if it doesnt exist*/
+		file = open(filename, O_CREAT | O_RDWR, FILE_PERMITIONS);/*file exist*/
 		flag = 1;
 		if (file == -1)
-		{
 			return (-1);
-		}
 	}
-	if (flag == 0)
+	if (flag == 0 && len > 0)/*it exists && len of content is greater than 0*/
 	{
 		trunc_code = ftruncate(file, len);
 		if (trunc_code != 0)
-		{
 			return (-1);
-		}
 		write_code = write(file, text_content, len);
 		if (write_code == -1)
-		{
 			return (-1);
-		}
 	}
-	else
+	else if (flag == 1 && len > 0)/* !exists && len > 0*/
 	{
 		write_code = write(file, text_content, len);
 		if (write_code == -1)
-		{
 			return (-1);
-		}
 	}
 	return (0);
 }
