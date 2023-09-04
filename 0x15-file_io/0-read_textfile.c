@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	ssize_t write_count, read_count;
 	char *BUFFER;
 
-	if (filename == NULL)/*file doesn't exist*/
+	if (filename == NULL || letters == 0)/*file doesn't exist*/
 		return (0);
 	/*open the file*/
 	fp  = open(filename, O_RDONLY);
