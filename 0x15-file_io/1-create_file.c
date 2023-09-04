@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 	unsigned int len;
 	mode_t FILE_PERMITIONS;
 
-	len = strlen(text_content) + 1;
+	len = strlen(text_content);
 	/*read and write permission for the owner*/
 	FILE_PERMITIONS = S_IRUSR | S_IWUSR;
 	if (filename == NULL)
@@ -49,5 +49,5 @@ int create_file(const char *filename, char *text_content)
 		if (write_code == -1)
 			return (-1);
 	}
-	return (0);
+	return (1);
 }
