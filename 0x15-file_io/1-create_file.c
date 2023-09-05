@@ -4,9 +4,17 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <string.h>
+/**
+ *create_empty_file- just create a file with a set permitions and a filename
+ *@filename:the filename
+ *@FILE_PERMITIONS:file permitions
+ */
 void create_empty_file(const char *filename, mode_t FILE_PERMITIONS)
 {
-	open(filename, O_RDWR | O_CREAT, FILE_PERMITIONS);
+	int file;
+
+	file = open(filename, O_RDWR | O_CREAT, FILE_PERMITIONS);
+	close(file);
 }
 /**
  * create_file- write content to a file , if it exists
