@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	/*exits if args are not availble*/
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf(2,"Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	BUFFER_ = malloc(sizeof(buffer));
@@ -76,6 +76,7 @@ int write_to_file(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 		dprintf(2, "Error: Can't close fd %d\n", close_code);
 		free(BUFFER_->string);
 		free(BUFFER_);
+		exit(100);
 	}
 	return (-1);
 }
@@ -128,6 +129,7 @@ int read_to_BUFFER(char *NAME_OF_THE_FILE, struct BUFFER *BUFFER_)
 		dprintf(2, "Error: Can't close fd %d\n", close_code);
 		free(BUFFER_->string);
 		free(BUFFER_);
+		exit(100);
 	}
 	return (1);
 }
