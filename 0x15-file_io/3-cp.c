@@ -27,6 +27,7 @@ int main(int argc, char **argv)
 	BUFFER_ = malloc(sizeof(buffer));
 	read_to_BUFFER(argv[1], BUFFER_);
 	write_to_file(argv[2], BUFFER_);
+	free(BUFFER_->string);
 	free(BUFFER_);
 	return (1);
 }
