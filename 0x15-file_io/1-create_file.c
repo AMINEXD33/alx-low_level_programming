@@ -7,7 +7,6 @@
 void create_empty_file(const char *filename, mode_t FILE_PERMITIONS)
 {
 	open(filename, O_RDWR | O_CREAT, FILE_PERMITIONS);
-	return(1);
 }
 /**
  * create_file- write content to a file , if it exists
