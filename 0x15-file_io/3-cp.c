@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	write_to_file(argv[2], BUFFER_);
 	free(BUFFER_->string);
 	free(BUFFER_);
-	return (1);
+	return (0);
 }
 /**
  *write_to_file- write the BUFFER to a file
