@@ -4,6 +4,11 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <string.h>
+void create_empty_file(const char *filename, mode_t FILE_PERMITIONS)
+{
+	open(filename, O_RDWR | O_CREAT, FILE_PERMITIONS);
+	return(1);
+}
 /**
  * create_file- write content to a file , if it exists
  * , if not the function will create it and write to it
@@ -20,11 +25,10 @@ int create_file(const char *filename, char *text_content)
 	unsigned int len;
 	mode_t FILE_PERMITIONS;
 
-	if (text_content == NULL)
-		return (1);
-	len = strlen(text_content);
-	/*read and write permission for the owner*/
 	FILE_PERMITIONS = S_IRUSR | S_IWUSR;
+	if (text_content == NULL)
+		create_empty_file(filename, FILE_PERMITIONS);
+	len = strlen(text_content);
 	if (filename == NULL)
 		return (-1);
 	file = open(filename, O_RDWR, FILE_PERMITIONS);/*file already exists*/
