@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 /**
  * dlistint_len-print the values of nodes in a linked list
@@ -8,9 +7,12 @@
 size_t dlistint_len(const dlistint_t *h)
 {
 	const dlistint_t *node = h;
-	size_t count;
+	int count;
 
 	count = 0;
+	if (node == NULL)
+		return (count);
+
 	while (node != NULL)
 	{
 		node = node->next;
