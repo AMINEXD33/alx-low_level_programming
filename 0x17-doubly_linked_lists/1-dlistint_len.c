@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_dlistint-print the values of nodes in a linked list
+ * dlistint_len-print the values of nodes in a linked list
  * @h: head of the linked list
  * Return: the size of the linked list
  */
