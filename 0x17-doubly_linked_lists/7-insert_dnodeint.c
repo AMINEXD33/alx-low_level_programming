@@ -38,7 +38,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (curr_n != NULL)
 	{
 		/*if it's idx pointing to the last element*/
-		if (curr_n != NULL && curr_n->next == NULL)
+		if (curr_n->next == NULL)
 		{
 			curr_n = add_dnodeint_end(&curr_n, (const int)n);
 			return (curr_n);
