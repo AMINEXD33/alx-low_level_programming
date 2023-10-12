@@ -8,7 +8,7 @@
 size_t dlistint_len(const dlistint_t *h)
 {
 	const dlistint_t *node = h;
-	unsigned int count;
+	size_t count;
 
 	count = 0;
 	while (node != NULL)
