@@ -23,22 +23,30 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (FALSE);
-	/*set values to the node*/
 	node->key = strdup(key);
 	node->value = strdup(value);
-	/*get hashed key index*/
-	index = key_index((unsigned char*)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
+	/*update value if it exists already*/
+	head = ht->array[index];
+	while (head != NULL)
+	{
+		if (strcmp(head->key, key) == 0)
+		{
+			free(head->value);
+			head->value = strdup(value);
+			return (TRUE);
+		}
+		head = head->next;
+	}
 	/*===========ADD NODE============*/
-	/*position index is empty*/
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = node;
 		return (TRUE);
 	}
-	/*position index is not empty*/
 	head = ht->array[index];
-	while (head != NULL)
+	while (head->next != NULL)
 		head = head->next;
-	head = node;
+	head->next = node;
 	return (TRUE);
 }
