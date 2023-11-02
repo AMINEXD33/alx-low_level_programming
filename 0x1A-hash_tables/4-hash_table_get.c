@@ -18,7 +18,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (ht == NULL || key == NULL || (strcmp(key, "") == 0))
 		return (NULL);
 	/*========GET INDEX========*/
-	index = key_index((unsigned char*)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 	/*===check for collisions==*/
 	head = ht->array[index];
 	while (head != NULL)
