@@ -14,7 +14,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	struct hash_table_s *TABLE = NULL;
 
 	if (size <= 0 || size > ULONG_MAX)
-		return(NULL);
+		return (NULL);
 	/*allocate memo for the hash table*/
 	TABLE = malloc(sizeof(hash_table_t));
 	if (TABLE == NULL)
