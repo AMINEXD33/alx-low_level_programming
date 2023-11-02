@@ -13,6 +13,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 	int x;
 	struct hash_table_s *TABLE = NULL;
 
+	if (size <= 0)
+		return(NULL);
 	/*allocate memo for the hash table*/
 	TABLE = malloc(sizeof(hash_table_t));
 	if (TABLE == NULL)
