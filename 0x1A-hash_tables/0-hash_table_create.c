@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <limits.h>
 /**
  * hash_table_create- create a hash table
  * @size: the size of the hash table
@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int x;
 	struct hash_table_s *TABLE = NULL;
 
-	if (size <= 0 || size == NULL)
+	if (size <= 0 || size > ULONG_MAX)
 		return(NULL);
 	/*allocate memo for the hash table*/
 	TABLE = malloc(sizeof(hash_table_t));
