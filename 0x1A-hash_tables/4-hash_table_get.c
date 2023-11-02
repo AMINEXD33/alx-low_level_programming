@@ -15,10 +15,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	struct hash_node_s *head = NULL;
 
 	/*=======CHECK POINTERS=======*/
-	if (ht == NULL || key == NULL || key == "")
+	if (ht == NULL || key == NULL || (strcmp(key, "") == 0))
 		return (NULL);
 	/*========GET INDEX========*/
-	index = key_index(key, ht->size);
+	index = key_index((unsigned char*)key, ht->size);
 	/*===check for collisions==*/
 	head = ht->array[index];
 	while (head != NULL)

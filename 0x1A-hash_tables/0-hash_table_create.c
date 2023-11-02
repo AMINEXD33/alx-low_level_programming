@@ -10,7 +10,7 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	int x;
+	unsigned long int x;
 	struct hash_table_s *TABLE = NULL;
 
 	if (size <= 0)
