@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	TABLE = malloc(sizeof(hash_table_t));
 	if (TABLE == NULL)
 		return (NULL);
-
+	TABLE->size = size;
 	/*allocate memo for the pointers array*/
 	TABLE->array = NULL;
 	TABLE->array = malloc(sizeof(hash_node_t *) * size);
