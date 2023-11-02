@@ -20,8 +20,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/*allocate memo for the pointers array*/
 	TABLE->array = NULL;
-	TABLE->array = malloc(sizeof(*hash_node_t) * size);
-	if (array == NULL)
+	TABLE->array = malloc(sizeof(hash_node_t *) * size);
+	if (TABLE->array == NULL)
 	{
 		free(TABLE);
 		return (NULL);
