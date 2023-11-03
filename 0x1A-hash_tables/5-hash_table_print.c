@@ -9,36 +9,32 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int x = 0;
+	struct hash_node_s *node = NULL;
+	unsigned long int TRACKER = 0;
+
 	/*=====TABLE CHECK=====*/
 	if (ht == NULL || ht->array == NULL)
 		return;
-
 	/*====PRINT TABLE=====*/
-
+	printf("{");
 	for (x = 0; x < ht->size; x++)
 	{
 		if (ht->array[x] != NULL)
-			print_linked_list(ht->array[x]);
-	}
+		{
+			node = ht->array[x];
+			while (node != NULL)
+			{
+				if (node->value != NULL && node->key != NULL)
+				{
+					printf("'%s': '%s'", node->key, node->value);
+					if (ht->items_in - 1 > TRACKER)
+						printf(", ");
+					TRACKER++;
+				}
+				node = node->next;
 
-}
-/**
- * print_linked_list- print a linked list
- * @head: the head of the linked list
- */
-void print_linked_list(struct hash_node_s *head)
-{
-	struct hash_node_s *node = NULL;
-
-	if (head == NULL)
-		return;
-	node = head;
-	printf("{");
-	while (node != NULL)
-	{
-		if (node->value != NULL && node->key != NULL)
-			printf("'%s':'%s'", node->key, node->value);
-		node = node->next;
+			}
+		}
 	}
 	printf("}\n");
 }

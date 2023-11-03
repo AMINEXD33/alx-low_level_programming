@@ -26,6 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->key = strdup(key);
 	node->value = strdup(value);
 	index = key_index((unsigned char *)key, ht->size);
+	ht->items_in += 1;
 	/*update value if it exists already*/
 	head = ht->array[index];
 	while (head != NULL)
