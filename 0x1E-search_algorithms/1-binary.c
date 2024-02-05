@@ -9,7 +9,8 @@
 void print_array(int *array, size_t size, size_t startfrom)
 {
 	size_t tracker = startfrom;
-	printf("Searching in array ");
+
+	printf("Searching in array: ");
 	while (tracker < size)
 	{
 		if (tracker == startfrom)
@@ -37,32 +38,26 @@ void print_array(int *array, size_t size, size_t startfrom)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int start = 0;
-	int end = size - 1;
-	size_t mid;
-	int stop = 0;
-	printf("prior while list = >");
-	print_array(array, size, 0);
-	while (start < end)
+	size_t start = 0;
+	size_t end = size - 1;
+	size_t mid, i;
+
+	if (array == NULL || !value)
+		return (-1);
+	while (start <= end)
 	{
-		print_array(array, end, start);
+		printf("Searching in array: ");
+		for (i = start; i < end; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 		mid = start + ((end - start) / 2);
-		printf("mid = %ld\n", mid);
-		
+
 		if (array[mid] == value)
-		{
 			return (mid);
-		}
 		else if  (value > array[mid])
-		{
-			start = mid;
-		}
-		else{
-			end = mid;
-		}
-		if (stop == 5)
-			return (-1);
-		stop++;
+			start = mid + 1;
+		else
+			end = mid - 1;
 	}
-	return(-1);
+	return (-1);
 }
