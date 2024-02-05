@@ -11,7 +11,7 @@ int linear_search(int *array, size_t size, int value)
 {
 	unsigned int tracker = 0;
 
-	if (array == NULL)
+	if (array == NULL || !value)
 		return (-1);
 	while (tracker < size)
 	{
